@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/assets">
+        <file>assets/Searh-Icon.svg</file>
+        <file>assets/plus-cc.svg</file>
+        <file>assets/p-circle.svg</file>
+        <file>assets/person-circle.png</file>
+        <file>assets/arrow-left-small.svg</file>
+        <file>assets/favicon.png</file>
+    </qresource>
+</RCC>
