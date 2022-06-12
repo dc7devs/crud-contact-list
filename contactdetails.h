@@ -2,13 +2,10 @@
 #define CONTACTDETAILS_H
 
 #include <QMainWindow>
+#include "ui_contactdetails.h"
+#include "main.h"
 
-namespace Ui {
-class ContactDetails;
-}
-
-class ContactDetails : public QMainWindow
-{
+class ContactDetails : public QMainWindow {
     Q_OBJECT
 
 public:
@@ -16,11 +13,11 @@ public:
     ~ContactDetails();
 
 private:
-    Ui::ContactDetails *ui;
+    Ui::ContactDetails ui;
 
 private slots:
     void backTomainwindow();
-
+    QList<tContactData> saveContact();
 };
 
-#endif // CONTACTDETAILS_H
+#endif

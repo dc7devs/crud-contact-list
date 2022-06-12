@@ -1,19 +1,14 @@
+#include "main.h"
 #include "mainwindow.h"
-#include "./ui_mainwindow.h"
-
 #include "contactdetails.h"
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
-    ui->setupUi(this);
-
-    connect(ui->AddNewContact, &QPushButton::clicked, this, &MainWindow::changeToScreenContactDetails);
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+    this->ui.setupUi(this);
+    connect(this->ui.AddNewContact, &QPushButton::clicked, this, &MainWindow::changeToScreenContactDetails);
 }
 
 MainWindow::~MainWindow() {
-    delete ui;
+    std::cout << "Desconstruido" << std::endl;
 }
 
 void MainWindow::changeToScreenContactDetails() {
@@ -21,4 +16,3 @@ void MainWindow::changeToScreenContactDetails() {
     ScreenContactDetails->show();
     close();
 }
-

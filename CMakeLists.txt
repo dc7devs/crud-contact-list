@@ -23,6 +23,7 @@ set(PROJECT_SOURCES
         contactdetails.h
         contactdetails.cpp
         contactdetails.ui
+        main.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

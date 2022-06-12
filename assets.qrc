@@ -6,5 +6,6 @@
         <file>assets/person-circle.png</file>
         <file>assets/arrow-left-small.svg</file>
         <file>assets/favicon.png</file>
+        <file>assets/arrow-left-small_b.svg</file>
     </qresource>
 </RCC>

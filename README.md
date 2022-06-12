@@ -1,7 +1,5 @@
 # Qt-contact-list
 
----
-
 ## To-do
 
 ### Layout e Funcionalidade (Qt Creator)
