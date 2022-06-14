@@ -2,14 +2,14 @@
 #include "contactdetails.h"
 #include "mainwindow.h"
 
-QList<tContactData> contactList;
 tContactData pontToContactList;
+QList<tContactData> contactList;
 
 ContactDetails::ContactDetails(QWidget *parent): QMainWindow(parent) {
     this->ui.setupUi(this);
 
     connect(this->ui.backPutton, &QPushButton::clicked, this, &ContactDetails::backTomainwindow);
-    connect(this->ui.ButtonSave, &QPushButton::clicked, this, &ContactDetails::saveContact);
+    connect(this->ui.ButtonSave, &QPushButton::clicked, this, &ContactDetails::saveContactToDataList);
 }
 
 ContactDetails::~ContactDetails() {}
@@ -21,17 +21,41 @@ void ContactDetails::backTomainwindow(){
     close();
 }
 
-QList<tContactData> ContactDetails::saveContact() {
+bool ContactDetails::comparator(tContactData CurrentData, tContactData NewData) {
+    return (NewData.name < CurrentData.name);
+}
+
+void ContactDetails::saveContactToDataList() {
+    srand(time(NULL));
+    int id = 1000 + rand() % 9999;
+    QList<tContactData>::iterator it = contactList.begin();
+    for(;it!=contactList.end() && id != it->id; it++) {
+        id = 1000 + rand() % 9999;
+    };
+
     pontToContactList = {
+        id,
         this->ui.lineEditName->text(),
         this->ui.spinBoxDay->value(),
         this->ui.spinBoxMonth->value()
     };
 
+    if (pontToContactList.name != "" && pontToContactList.birthdayDay != 0 && pontToContactList.birthdayMonth != 0) {
+        it = contactList.begin();
+        for (;it != contactList.end() || it->name < contactList.name; it++);
+        contactList.insert(it, pontToContactList);
+    } else;
 
-    QList<tContactData>::iterator it = contactList.begin();
-    for (;it != contactList.end(); it++);
-    contactList.insert(it, pontToContactList);
+    // MainWindow->ui.ListContact->addItem(pontToContactList);
 
-    return contactList;
+    // contactList.sort(comparator); // organizar a lista
+
+    //qDebug() << "size cotact list(depois): " << contactList.size();
+    //for(QList<tContactData>::iterator it = contactList.begin(); it != contactList.end(); it++) {
+    //      qDebug() << it->id;
+    //      qDebug() << it->name;
+    //      qDebug() << it->birthdayDay << "/" << it->birthdayMonth << "\n";
+    //}
+
 }
+

@@ -17,7 +17,9 @@ private:
 
 private slots:
     void backTomainwindow();
-    QList<tContactData> saveContact();
+
+    void saveContactToDataList();
+    bool comparator(tContactData CurrentData, tContactData NewData);
 };
 
 #endif

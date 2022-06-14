@@ -1,4 +1,5 @@
-#include "main.h"
+// #include "main.h"
+#include <iostream>
 #include "mainwindow.h"
 #include "contactdetails.h"
 
@@ -7,9 +8,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     connect(this->ui.AddNewContact, &QPushButton::clicked, this, &MainWindow::changeToScreenContactDetails);
 }
 
-MainWindow::~MainWindow() {
-    std::cout << "Desconstruido" << std::endl;
-}
+MainWindow::~MainWindow() {}
 
 void MainWindow::changeToScreenContactDetails() {
     ContactDetails* ScreenContactDetails = new ContactDetails;

@@ -33,7 +33,7 @@
    <string notr="true">background-color: #fff;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QScrollArea" name="FilterToLetter">
+   <widget class="QScrollArea" name="BoxFilterToLetter">
     <property name="enabled">
      <bool>true</bool>
     </property>
@@ -83,7 +83,7 @@ QScrollArea {
     <property name="alignment">
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
-    <widget class="QWidget" name="FilterToLetter_scroll">
+    <widget class="QWidget" name="Buttons">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -625,7 +625,7 @@ outline: none;
       <height>71</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <layout class="QHBoxLayout" name="searchLayout">
      <property name="spacing">
       <number>0</number>
      </property>
@@ -932,62 +932,6 @@ background: transparent;</string>
     <property name="selectionRectVisible">
      <bool>false</bool>
     </property>
-    <item>
-     <property name="text">
-      <string>João duarte</string>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>18</pointsize>
-      </font>
-     </property>
-     <property name="icon">
-      <iconset resource="assets.qrc">
-       <normaloff>:/assets/assets/p-circle.svg</normaloff>:/assets/assets/p-circle.svg</iconset>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Lucas Caetano da Silva</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../../../Pictures/Avatar/avatar-HARD.png</normaloff>../../../../Pictures/Avatar/avatar-HARD.png</iconset>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Marcos Jose Viana Silveira</string>
-     </property>
-     <property name="icon">
-      <iconset resource="assets.qrc">
-       <normaloff>:/assets/assets/p-circle.svg</normaloff>:/assets/assets/p-circle.svg</iconset>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Diego Caetano da Silva</string>
-     </property>
-     <property name="icon">
-      <iconset>
-       <normaloff>../../../../Pictures/Avatar/avatar-HARD.png</normaloff>../../../../Pictures/Avatar/avatar-HARD.png</iconset>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Maria Eduarda</string>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>18</pointsize>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="icon">
-      <iconset resource="assets.qrc">
-       <normaloff>:/assets/assets/p-circle.svg</normaloff>:/assets/assets/p-circle.svg</iconset>
-     </property>
-    </item>
    </widget>
    <widget class="QPushButton" name="AddNewContact">
     <property name="enabled">
@@ -1028,7 +972,7 @@ left: 100%;</string>
     </property>
    </widget>
    <zorder>layoutWidget</zorder>
-   <zorder>FilterToLetter</zorder>
+   <zorder>BoxFilterToLetter</zorder>
    <zorder>ListContact</zorder>
    <zorder>AddNewContact</zorder>
   </widget>

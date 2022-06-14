@@ -6,14 +6,12 @@
 #include <QString>
 #include <qdebug.h>
 #include <QPushButton>
+#include <time.h>
 
 struct tContactData {
+    int id;
     QString name;
     int birthdayDay, birthdayMonth;
 };
-
-//bool comparator(tContactData CurrentData, tContactData NewData) {
-//    return (NewData.name < CurrentData.name);
-//}
 
 #endif
