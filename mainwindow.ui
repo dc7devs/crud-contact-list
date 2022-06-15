@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>contactwindow</string>
+   <string>Contacts</string>
   </property>
   <property name="windowIcon">
    <iconset resource="assets.qrc">
@@ -31,6 +31,12 @@
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #fff;</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>20</width>
+    <height>20</height>
+   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QScrollArea" name="BoxFilterToLetter">
@@ -932,6 +938,24 @@ background: transparent;</string>
     <property name="selectionRectVisible">
      <bool>false</bool>
     </property>
+    <item>
+     <property name="text">
+      <string>Diego Silva</string>
+     </property>
+     <property name="icon">
+      <iconset resource="assets.qrc">
+       <normaloff>:/assets/assets/p-circle.svg</normaloff>:/assets/assets/p-circle.svg</iconset>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Lucas Caetano da Silva</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../../../../Pictures/Avatar/avatar-HARD.png</normaloff>../../../../Pictures/Avatar/avatar-HARD.png</iconset>
+     </property>
+    </item>
    </widget>
    <widget class="QPushButton" name="AddNewContact">
     <property name="enabled">
@@ -971,10 +995,21 @@ left: 100%;</string>
      </size>
     </property>
    </widget>
+   <widget class="QListView" name="ListView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>471</width>
+      <height>531</height>
+     </rect>
+    </property>
+   </widget>
    <zorder>layoutWidget</zorder>
    <zorder>BoxFilterToLetter</zorder>
    <zorder>ListContact</zorder>
    <zorder>AddNewContact</zorder>
+   <zorder>ListView</zorder>
   </widget>
  </widget>
  <resources>

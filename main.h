@@ -2,11 +2,11 @@
 #define MAIN_H
 
 #include <iostream>
+#include <qdebug.h>
+#include <time.h>
 #include <QList>
 #include <QString>
-#include <qdebug.h>
 #include <QPushButton>
-#include <time.h>
 
 struct tContactData {
     int id;

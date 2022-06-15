@@ -1,15 +1,13 @@
 #include "main.h"
-#include "contactdetails.h"
 #include "mainwindow.h"
 
-tContactData pontToContactList;
 QList<tContactData> contactList;
 
 ContactDetails::ContactDetails(QWidget *parent): QMainWindow(parent) {
     this->ui.setupUi(this);
 
     connect(this->ui.backPutton, &QPushButton::clicked, this, &ContactDetails::backTomainwindow);
-    connect(this->ui.ButtonSave, &QPushButton::clicked, this, &ContactDetails::saveContactToDataList);
+    connect(this->ui.ButtonSave, &QPushButton::clicked, this, &ContactDetails::saveContact);
 }
 
 ContactDetails::~ContactDetails() {}
@@ -25,7 +23,9 @@ bool ContactDetails::comparator(tContactData CurrentData, tContactData NewData) 
     return (NewData.name < CurrentData.name);
 }
 
-void ContactDetails::saveContactToDataList() {
+void ContactDetails::saveContact() {
+    tContactData pontToContactList;
+
     srand(time(NULL));
     int id = 1000 + rand() % 9999;
     QList<tContactData>::iterator it = contactList.begin();
@@ -42,20 +42,19 @@ void ContactDetails::saveContactToDataList() {
 
     if (pontToContactList.name != "" && pontToContactList.birthdayDay != 0 && pontToContactList.birthdayMonth != 0) {
         it = contactList.begin();
-        for (;it != contactList.end() || it->name < contactList.name; it++);
+        for (;it != contactList.end(); it++);
         contactList.insert(it, pontToContactList);
     } else;
 
-    // MainWindow->ui.ListContact->addItem(pontToContactList);
+//     MainWindow->ui.ListContact->addItem(pontToContactList);
 
-    // contactList.sort(comparator); // organizar a lista
+    // contactList.sort(comparator); // organizar a lista em ordem alfabetica
 
-    //qDebug() << "size cotact list(depois): " << contactList.size();
-    //for(QList<tContactData>::iterator it = contactList.begin(); it != contactList.end(); it++) {
-    //      qDebug() << it->id;
-    //      qDebug() << it->name;
-    //      qDebug() << it->birthdayDay << "/" << it->birthdayMonth << "\n";
-    //}
-
+//    qDebug() << "size cotact list(depois): " << contactList.size();
+//    for(QList<tContactData>::iterator it = contactList.begin(); it != contactList.end(); it++) {
+//          qDebug() << it->id;
+//          qDebug() << it->name;
+//          qDebug() << it->birthdayDay << "/" << it->birthdayMonth << "\n";
+//    }
 }
 

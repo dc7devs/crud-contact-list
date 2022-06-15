@@ -1,18 +1,18 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QSplashScreen>
+#include <QTimer>
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
-    MainWindow w;
-    QSplashScreen *splash = new QSplashScreen;
 
-    splash->finish(&w);
-    splash->setPixmap(QPixmap("favicon.png"));
+    QSplashScreen *splash = new QSplashScreen;
+    splash->setPixmap(QPixmap(":/assets/assets/favicon.png"));
     splash->show();
 
-    w.show();
+    MainWindow w;
 
-    delete splash;
+    QTimer::singleShot(3000, splash, SLOT(close()));
+    QTimer::singleShot(3000, &w, SLOT(show()));
     return a.exec();
 }
