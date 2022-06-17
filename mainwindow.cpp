@@ -15,14 +15,43 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
 // CRIAR CONTATO
 void MainWindow::createContact() {
+    this->ui.ButtonSave->setVisible(true);
+    this->ui.ButtonEdit->setVisible(false);
+    this->ui.ButtonDelete->setVisible(false);
+
+    this->ui.titleSection->setText("");
+
+    this->ui.lineEditName->setText("");
+    this->ui.comboBoxDay->currentText();
+    this->ui.comboBoxMonth->currentText();
+
+    this->ui.lineEditName->setDisabled(false);
+    this->ui.comboBoxDay->setDisabled(false);
+    this->ui.comboBoxMonth->setDisabled(false);
+
     this->ui.DetailsScreen->setVisible(true);
 }
 // LER CONTATO
 void MainWindow::readContact(QListWidgetItem *item) {
+    this->ui.ButtonSave->setVisible(false);
+    this->ui.ButtonEdit->setVisible(true);
+    this->ui.ButtonDelete->setVisible(true);
 
+    this->ui.titleSection->setText("Detalhes do Contato");
+
+    this->ui.lineEditName->setDisabled(true);
+    this->ui.comboBoxDay->setDisabled(true);
+    this->ui.comboBoxMonth->setDisabled(true);
+
+    this->ui.DetailsScreen->setVisible(true);
+
+    this->ui.lineEditName->setText(item->data(2).toString());
+    this->ui.comboBoxDay->setCurrentText(item->data(3).toString());
+    this->ui.comboBoxMonth->setCurrentText(item->data(4).toString());
 }
 // ATUALIZAR CONTATO
 void MainWindow::updateContact(tContactData contact) {
+
 }
 // REMOVER CONTATO
 void  MainWindow::deleteContact(tContactData contact) {
@@ -37,10 +66,6 @@ void MainWindow::saveContact() {
 
     srand(time(NULL));
     int id = 1000 + rand() % 9999;
-    QList<tContactData>::iterator it = contactList.begin();
-    for(;it!=contactList.end() && id != it->id; it++) {
-        id = 1000 + rand() % 9999;
-    };
 
     pontToContactList = {
         id,
@@ -50,14 +75,31 @@ void MainWindow::saveContact() {
     };
 
     if (pontToContactList.name != "" && pontToContactList.birthdayDay != 0 && pontToContactList.birthdayMonth != 0) {
-        it = contactList.begin();
-        for (;it != contactList.end(); it++);
-        contactList.insert(it, pontToContactList);
+        //QVariant datas(pontToContactList);
+        // QIcon(pontToContactList.pathImage), pontToContactList.name
 
+        QListWidgetItem *NewItem = new QListWidgetItem;
+
+        NewItem->setData(1, pontToContactList.id);
+        NewItem->setData(2, pontToContactList.name);
+        NewItem->setData(3, pontToContactList.birthdayDay);
+        NewItem->setData(4, pontToContactList.birthdayMonth);
+        NewItem->setData(5, pontToContactList.pathImage);
+
+
+        NewItem->setText(NewItem->data(2).toString());
+        NewItem->setIcon(QIcon(NewItem->data(5).toString()));
+
+        //for (int i=0; i<this->ui.ListContact->count(); ++i) {
+            this->ui.ListContact->insertItem(this->ui.ListContact->count(), NewItem);
+        //}
         this->ui.DetailsScreen->setVisible(false);
-    } else;
-
-    // contactList.sort(comparator); // organizar a lista em ordem alfabetica
+    }
 }
 
 MainWindow::~MainWindow() {}
+
+
+//it = contactList.begin();
+//for (;it != contactList.end(); it++);
+//contactList.insert(it, pontToContactList);

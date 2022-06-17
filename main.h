@@ -14,6 +14,7 @@ struct tContactData {
     int id;
     QString name;
     int birthdayDay, birthdayMonth;
+    QString pathImage = ":/assets/assets/p-circle.svg";
 };
 
 //bool comparator(tContactData CurrentData, tContactData NewData) {

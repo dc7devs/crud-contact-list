@@ -947,15 +947,6 @@ background: transparent;</string>
      <property name="selectionRectVisible">
       <bool>false</bool>
      </property>
-     <item>
-      <property name="text">
-       <string>Diego Silva</string>
-      </property>
-      <property name="icon">
-       <iconset resource="assets.qrc">
-        <normaloff>:/assets/assets/p-circle.svg</normaloff>:/assets/assets/p-circle.svg</iconset>
-      </property>
-     </item>
     </widget>
     <widget class="QPushButton" name="AddNewContact">
      <property name="enabled">
@@ -1048,6 +1039,9 @@ border: 0px;</string>
       </property>
       <item row="1" column="0" colspan="2">
        <widget class="QLineEdit" name="lineEditName">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: #E0E0E0;
 height: 35px;
@@ -1068,22 +1062,7 @@ margin-bottom: 20px;</string>
         </property>
        </widget>
       </item>
-      <item row="0" column="0" colspan="2">
-       <widget class="QLabel" name="labelName">
-        <property name="styleSheet">
-         <string notr="true">color: #6A6A6A;
-background: none;
-font-weight: 400;
-font-size: 14px;
-
-padding: 0;</string>
-        </property>
-        <property name="text">
-         <string>Nome</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0" colspan="2">
+      <item row="10" column="0" colspan="2">
        <spacer name="verticalSpacer_2">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -1099,57 +1078,23 @@ padding: 0;</string>
         </property>
        </spacer>
       </item>
-      <item row="8" column="0" colspan="2">
-       <widget class="QPushButton" name="ButtonSave">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background: #241F31;
-color: #FFF;
-height: 50px;
-
-font-size: 20px;
-font-weight: 700;</string>
-        </property>
-        <property name="text">
-         <string>Salvar</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QLabel" name="labelDay">
-        <property name="styleSheet">
-         <string notr="true">color: #6A6A6A;
-background: none;
-font-weight: 400;
-font-size: 14px;
-
-padding: 0;
-</string>
-        </property>
-        <property name="text">
-         <string>Dia Aniversário</string>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLabel" name="labelMonth">
-        <property name="styleSheet">
-         <string notr="true">color: #6A6A6A;
-background: none;
-font-weight: 400;
-font-size: 14px;
-
-padding: 0;</string>
-        </property>
-        <property name="text">
-         <string>Mês Aniversário</string>
-        </property>
-       </widget>
-      </item>
       <item row="5" column="0">
        <widget class="QComboBox" name="comboBoxDay">
+        <property name="mouseTracking">
+         <bool>true</bool>
+        </property>
+        <property name="tabletTracking">
+         <bool>false</bool>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::WheelFocus</enum>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
          <string notr="true">QComboBox {
 	background-color: #E0E0E0;
@@ -1196,11 +1141,14 @@ QComboBox::down-arrow {
         <property name="maxCount">
          <number>32</number>
         </property>
+        <property name="insertPolicy">
+         <enum>QComboBox::InsertAtCurrent</enum>
+        </property>
         <property name="sizeAdjustPolicy">
-         <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+         <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
         </property>
         <property name="minimumContentsLength">
-         <number>0</number>
+         <number>5</number>
         </property>
         <property name="placeholderText">
          <string>00</string>
@@ -1368,6 +1316,68 @@ QComboBox::down-arrow {
         </item>
        </widget>
       </item>
+      <item row="7" column="0" colspan="2">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>133</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="labelName">
+        <property name="styleSheet">
+         <string notr="true">color: #6A6A6A;
+background: none;
+font-weight: 400;
+font-size: 14px;
+
+padding: 0;</string>
+        </property>
+        <property name="text">
+         <string>Nome</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QPushButton" name="ButtonEdit">
+        <property name="styleSheet">
+         <string notr="true">background: #241F31;
+color: #FFF;
+height: 50px;
+
+font-size: 20px;
+font-weight: 700;</string>
+        </property>
+        <property name="text">
+         <string>EDITAR</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="labelDay">
+        <property name="styleSheet">
+         <string notr="true">color: #6A6A6A;
+background: none;
+font-weight: 400;
+font-size: 14px;
+
+padding: 0;
+</string>
+        </property>
+        <property name="text">
+         <string>Dia Aniversário</string>
+        </property>
+       </widget>
+      </item>
       <item row="5" column="1">
        <widget class="QComboBox" name="comboBoxMonth">
         <property name="layoutDirection">
@@ -1415,6 +1425,12 @@ QComboBox::down-arrow {
         </property>
         <property name="insertPolicy">
          <enum>QComboBox::InsertAtCurrent</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QComboBox::AdjustToMinimumContentsLengthWithIcon</enum>
+        </property>
+        <property name="minimumContentsLength">
+         <number>5</number>
         </property>
         <property name="iconSize">
          <size>
@@ -1487,21 +1503,53 @@ QComboBox::down-arrow {
         </item>
        </widget>
       </item>
-      <item row="7" column="0" colspan="2">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
+      <item row="2" column="1">
+       <widget class="QLabel" name="labelMonth">
+        <property name="styleSheet">
+         <string notr="true">color: #6A6A6A;
+background: none;
+font-weight: 400;
+font-size: 14px;
+
+padding: 0;</string>
         </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
+        <property name="text">
+         <string>Mês Aniversário</string>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>133</height>
-         </size>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QPushButton" name="ButtonDelete">
+        <property name="styleSheet">
+         <string notr="true">background: #FF4848;
+color: #FFF;
+height: 50px;
+
+font-size: 20px;
+font-weight: 700;</string>
         </property>
-       </spacer>
+        <property name="text">
+         <string>APAGAR</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <widget class="QPushButton" name="ButtonSave">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #241F31;
+color: #FFF;
+height: 50px;
+
+font-size: 20px;
+font-weight: 700;</string>
+        </property>
+        <property name="text">
+         <string>Salvar</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>
@@ -1533,6 +1581,9 @@ outline: none;</string>
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="styleSheet">
          <string notr="true"/>
