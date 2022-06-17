@@ -20,8 +20,6 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
         assets.qrc
-        contactdetails.cpp
-        contactdetails.ui
         main.h
 )
 

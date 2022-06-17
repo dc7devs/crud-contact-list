@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include "main.h"
 #include "ui_mainwindow.h"
-#include "ui_contactdetails.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -17,25 +16,13 @@ class MainWindow : public QMainWindow {
         Ui::MainWindow ui;
 
     private slots:
-        void createContact();
-        void contactDetails(QListWidgetItem *item);
-};
+        void createContact();//                             C
+        void readContact(QListWidgetItem *item);//        R
+        void updateContact(tContactData contact);//                             U
+        void deleteContact(tContactData contact);//                             D
 
-class ContactDetails : public QMainWindow {
-    Q_OBJECT
-
-    public:
-        explicit ContactDetails(QWidget *parent = nullptr);
-        ~ContactDetails();
-
-    private:
-        Ui::ContactDetails ui;
-
-    private slots:
         void backTomainwindow();
-
         void saveContact();
-        bool comparator(tContactData CurrentData, tContactData NewData);
 };
 
 #endif

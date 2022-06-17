@@ -7,5 +7,6 @@
         <file>assets/arrow-left-small.svg</file>
         <file>assets/favicon.png</file>
         <file>assets/arrow-left-small_b.svg</file>
+        <file>assets/arrow-down.svg</file>
     </qresource>
 </RCC>
