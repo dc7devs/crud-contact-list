@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "main.h"
 #include "ui_mainwindow.h"
 
 class MainWindow : public QMainWindow {
@@ -18,10 +17,11 @@ class MainWindow : public QMainWindow {
     private slots:
         void createContact();//                             C
         void readContact(QListWidgetItem *item);//        R
-        void updateContact(tContactData contact);//                             U
-        void deleteContact(tContactData contact);//                             D
+        void updateContact();//                             U
+        void deleteContact();//                             D
 
         void backTomainwindow();
+        void AddImage();
         void saveContact();
 };
 

@@ -1,15 +1,16 @@
+#include "main.h"
 #include "mainwindow.h"
-
-QList<tContactData> contactList;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     this->ui.setupUi(this);
     this->ui.DetailsScreen->setVisible(false);
+    this->ui.ButtonAddImage->setStyleSheet(STYLE_IMAGE_DEFAULT);
 
     connect(this->ui.AddNewContact, &QPushButton::clicked, this, &MainWindow::createContact);
     connect(this->ui.ListContact, &QListWidget::itemClicked, this, &MainWindow::readContact);
 
     connect(this->ui.backPutton, &QPushButton::clicked, this, &MainWindow::backTomainwindow);
+    connect(this->ui.ButtonAddImage, &QPushButton::clicked, this, &MainWindow::AddImage);
     connect(this->ui.ButtonSave, &QPushButton::clicked, this, &MainWindow::saveContact);
 }
 
@@ -21,9 +22,12 @@ void MainWindow::createContact() {
 
     this->ui.titleSection->setText("");
 
+    *pathImage = ":/images/assets/person-circle.png";
+    this->ui.ButtonAddImage->setStyleSheet(STYLE_IMAGE_DEFAULT);
+    this->ui.ButtonAddImage->setDisabled(false);
     this->ui.lineEditName->setText("");
-    this->ui.comboBoxDay->currentText();
-    this->ui.comboBoxMonth->currentText();
+    this->ui.comboBoxDay->setCurrentIndex(-1);
+    this->ui.comboBoxMonth->setCurrentIndex(-1);
 
     this->ui.lineEditName->setDisabled(false);
     this->ui.comboBoxDay->setDisabled(false);
@@ -39,6 +43,9 @@ void MainWindow::readContact(QListWidgetItem *item) {
 
     this->ui.titleSection->setText("Detalhes do Contato");
 
+    *pathImage = item->data(5).toString();
+    this->ui.ButtonAddImage->setStyleSheet(STYLE_IMAGE);
+    this->ui.ButtonAddImage->setDisabled(true);
     this->ui.lineEditName->setDisabled(true);
     this->ui.comboBoxDay->setDisabled(true);
     this->ui.comboBoxMonth->setDisabled(true);
@@ -50,20 +57,30 @@ void MainWindow::readContact(QListWidgetItem *item) {
     this->ui.comboBoxMonth->setCurrentText(item->data(4).toString());
 }
 // ATUALIZAR CONTATO
-void MainWindow::updateContact(tContactData contact) {
+void MainWindow::updateContact() {
 
 }
 // REMOVER CONTATO
-void  MainWindow::deleteContact(tContactData contact) {
+void  MainWindow::deleteContact() {
 }
 
 
 void MainWindow::backTomainwindow(){
     this->ui.DetailsScreen->setVisible(false);
 }
-void MainWindow::saveContact() {
-    tContactData pontToContactList;
+void MainWindow::AddImage() {
+    QFileDialog dialog(this);
 
+    dialog.setNameFilter(tr("Images (*.png *.xpm *.jpg)"));
+    dialog.setViewMode(QFileDialog::Detail);
+
+    QString fileName = QFileDialog::getOpenFileName(this,
+         tr("Open Image"), "/home", tr("Image Files (*.png *.jpg *.bmp)"));
+
+    *pathImage = fileName != "" ? fileName : ":/images/assets/person-circle.png";
+    this->ui.ButtonAddImage->setStyleSheet(STYLE_IMAGE);
+}
+void MainWindow::saveContact() {
     srand(time(NULL));
     int id = 1000 + rand() % 9999;
 
@@ -71,14 +88,15 @@ void MainWindow::saveContact() {
         id,
         this->ui.lineEditName->text(),
         this->ui.comboBoxDay->currentText().toInt(),
-        this->ui.comboBoxMonth->currentText().toInt()
+        this->ui.comboBoxMonth->currentText().toInt(),
+        *pathImage
     };
 
     if (pontToContactList.name != "" && pontToContactList.birthdayDay != 0 && pontToContactList.birthdayMonth != 0) {
-        //QVariant datas(pontToContactList);
-        // QIcon(pontToContactList.pathImage), pontToContactList.name
-
         QListWidgetItem *NewItem = new QListWidgetItem;
+
+        qDebug() << "this->ui.ButtonAddImage->text(): " << this->ui.ButtonAddImage->text();
+        qDebug() << "pontToContactList.pathImage: " << pontToContactList.pathImage;
 
         NewItem->setData(1, pontToContactList.id);
         NewItem->setData(2, pontToContactList.name);
@@ -103,3 +121,4 @@ MainWindow::~MainWindow() {}
 //it = contactList.begin();
 //for (;it != contactList.end(); it++);
 //contactList.insert(it, pontToContactList);
+

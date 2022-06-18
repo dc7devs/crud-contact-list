@@ -5,9 +5,9 @@
 ### Layout e Funcionalidade (Qt Creator)
 
 - [x] Layout da tela principal
-- [ ] Funcionalidade da tela principal
+- [x] Funcionalidade da tela principal
 - [x] Layout da tela, criar contato
-- [ ] Funcionalidade da tela, criar contato
+- [x] Funcionalidade da tela, criar contato
 - [ ] Layout da tela, Detalhes Contato
 - [ ] Funcionalidade da tela, Detalhes Contato
 - [ ] Layout da tela, Editar Contato
