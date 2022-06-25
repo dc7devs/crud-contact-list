@@ -1089,6 +1089,9 @@ QLineEdit:disabled {
       </item>
       <item row="5" column="0">
        <widget class="QComboBox" name="comboBoxDay">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
         <property name="mouseTracking">
          <bool>true</bool>
         </property>
@@ -1591,6 +1594,9 @@ font-weight: 700;</string>
      </layout>
     </widget>
     <widget class="QFrame" name="ContainerImage">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>-1</x>

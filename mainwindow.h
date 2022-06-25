@@ -11,15 +11,16 @@ class MainWindow : public QMainWindow {
         MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
 
-     private:
+    private:
         Ui::MainWindow ui;
 
     private slots:
-        void createContact();//                             C
-        void readContact(QListWidgetItem *item);//        R
-        void updateContact();//                             U
-        void deleteContact();//                             D
+        void createContact();
+        void readContact(QListWidgetItem *item);
+        void updateContact();
+        void deleteContact();
 
+        void searchName(const QString &arg1);
         void backTomainwindow();
         void AddImage();
         void saveContact();

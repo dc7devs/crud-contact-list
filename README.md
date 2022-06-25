@@ -17,18 +17,17 @@
 
 ### Manipulação e estruturas das informações (C/C++)
 
-- [ ] Definir estrutura para manipulação utilizando o conceito de Linked List 
-- [ ] Definir estrutura principal que carrega as informações do contato
-- [ ] Função para criar contato utilizando a estrutura
-- [ ] Função para lê contato especifico da lista de contato
-- [ ] Função para atualizar informações especificas de um contato especifico
-- [ ] Função para remover contato da lista de contato
+- [ ] Definir estrutura principal que carrega as informações do contato do banco de dados(essa estrutura ira receber as informações vidas do banco)
+- [ ] Função para criar contato utilizando a estrutura, o contato deve ser adicionado no banco(Atualizar contato com as novas informações)
+- [ ] Função para lê contato especifico da lista pelo banco de dados(Atualizar o layoyt com as novas informações)
+- [ ] Função para atualizar informações especificas de um contato especifico do banco (atualizar layout com as novas informações)
+- [ ] Função para remover contato do banco(atualizar o Layout com as novas informações)
 
-### Integração com banco (MySQL)
+### Integração com banco (SQLite)
 
-- [ ] Inicializar obanco de dados com MySQL
-- [ ] Criar a tabela com os dados do contato
-- [ ] Integrar o banco de dados com a aplicação
+- [x] Inicializar obanco de dados com SQLite
+- [x] Criar a tabela com os dados do contato
+- [x] Integrar o banco de dados com a aplicação
 
 ---
 
