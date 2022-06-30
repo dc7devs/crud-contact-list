@@ -8,20 +8,20 @@
 - [x] Funcionalidade da tela principal
 - [x] Layout da tela, criar contato
 - [x] Funcionalidade da tela, criar contato
-- [ ] Layout da tela, Detalhes Contato
-- [ ] Funcionalidade da tela, Detalhes Contato
-- [ ] Layout da tela, Editar Contato
-- [ ] Funcionalidade da tela, Editar Contato
-- [ ] Layout da tela, Apagar Contato
-- [ ] Funcionalidade da tela, Apagar Contato
+- [x] Layout da tela, Detalhes Contato
+- [x] Funcionalidade da tela, Detalhes Contato
+- [x] Layout da tela, Editar Contato
+- [x] Funcionalidade da tela, Editar Contato
+- [x] Layout da tela, Apagar Contato
+- [x] Funcionalidade da tela, Apagar Contato
 
 ### Manipulação e estruturas das informações (C/C++)
 
-- [ ] Definir estrutura principal que carrega as informações do contato do banco de dados(essa estrutura ira receber as informações vidas do banco)
-- [ ] Função para criar contato utilizando a estrutura, o contato deve ser adicionado no banco(Atualizar contato com as novas informações)
-- [ ] Função para lê contato especifico da lista pelo banco de dados(Atualizar o layoyt com as novas informações)
-- [ ] Função para atualizar informações especificas de um contato especifico do banco (atualizar layout com as novas informações)
-- [ ] Função para remover contato do banco(atualizar o Layout com as novas informações)
+- [x] Definir estrutura principal que carrega as informações do contato do banco de dados(essa estrutura ira receber as informações vidas do banco)
+- [x] Função para criar contato utilizando a estrutura, o contato deve ser adicionado no banco(Atualizar contato com as novas informações)
+- [x] Função para lê contato especifico da lista pelo banco de dados(Atualizar o layoyt com as novas informações)
+- [x] Função para atualizar informações especificas de um contato especifico do banco (atualizar layout com as novas informações)
+- [x] Função para remover contato do banco(atualizar o Layout com as novas informações)
 
 ### Integração com banco (SQLite)
 
@@ -36,38 +36,10 @@
 ## Estrutura de dados
 
 ```c
-typdef struct {
-    int id; // gerar automaticamente a cada inserção
-	char *name;
-	int birthdayDay, birthdayMonth;
-	
-	char *avatarImagePath;
-} tContactData;
-
-typedef struct no {
-    tContactData contact;
-    struct no next;
-} tContactList, *pContactList;
-
-
-pContactList contactList = malloc(sizeof(tContactList));
-
+struct tContactData {
+    int id;
+    QString name;
+    QString birthdayDay, birthdayMonth;
+    QString pathImage = ":/images/assets/person-circle.png";
+};
 ```
-
-<!-- Insertion of elements based on algorithm by insertion -->
-
-## CRUD
-
-### CREATE
-Função para criar contato utilizando a estrutura
-
-void add
-
-### READ
-Função para lê contato especifico da lista de contato
-
-### UPDATE
-Função para atualizar informações especificas de um contato especifico
-
-### DELETE
-Função para remover contato da lista de contato

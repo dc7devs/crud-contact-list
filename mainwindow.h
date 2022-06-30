@@ -15,15 +15,26 @@ class MainWindow : public QMainWindow {
         Ui::MainWindow ui;
 
     private slots:
-        void createContact();
-        void readContact(QListWidgetItem *item);
-        void updateContact();
-        void deleteContact();
+        // Screens
+        void createContactScreen();
+        void readContactScreen(QListWidgetItem *item);
+        void updateContactScreen();
+        void deleteContactScreen();
 
-        void searchName(const QString &arg1);
+        // specific methods
+        void searchName();
+        void searchNameForLetter(QListWidgetItem *item);
         void backTomainwindow();
-        void AddImage();
+        void addImage();
         void saveContact();
+        void updateContact();
+
+        // database
+        void refreshQListWidget();
+        void addToDatabase();
+        void readToDatabase(int id);
+        void updateToDatabase(int id);
+        void deleteToDatabase(int id);
 };
 
 #endif

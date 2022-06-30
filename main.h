@@ -7,8 +7,6 @@
 #include <QString>
 #include <QPushButton>
 #include <QFileDialog>
-#include <QMouseEvent>
-#include <QRegularExpression>
 
 #include <QtSql>
 #include <qdebug.h>
@@ -18,13 +16,9 @@ using namespace std;
 struct tContactData {
     int id;
     QString name;
-    int birthdayDay, birthdayMonth;
+    QString birthdayDay, birthdayMonth;
     QString pathImage = ":/images/assets/person-circle.png";
 };
-
-//bool comparator(tContactData CurrentData, tContactData NewData) {
-//    return (NewData.name < CurrentData.name);
-//}
 
 tContactData pontToContactList;
 QString *pathImage = new QString(pontToContactList.pathImage);

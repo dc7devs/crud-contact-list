@@ -48,589 +48,6 @@
       <height>701</height>
      </rect>
     </property>
-    <widget class="QScrollArea" name="BoxFilterToLetter">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>100</y>
-       <width>491</width>
-       <height>71</height>
-      </rect>
-     </property>
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="layoutDirection">
-      <enum>Qt::LeftToRight</enum>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QScrollBar:horizontal {
-	width: 0px;
-	background: none;
-}
-
-QScrollArea {
-	border: none;
-	padding-left: 10px;
-}</string>
-     </property>
-     <property name="verticalScrollBarPolicy">
-      <enum>Qt::ScrollBarAlwaysOff</enum>
-     </property>
-     <property name="horizontalScrollBarPolicy">
-      <enum>Qt::ScrollBarAlwaysOff</enum>
-     </property>
-     <property name="sizeAdjustPolicy">
-      <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
-     </property>
-     <property name="widgetResizable">
-      <bool>true</bool>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-     <widget class="QWidget" name="Buttons">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>1884</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QPushButton" name="pushButton_A">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>A</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_B">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>B</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_C">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>C</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_D">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>D</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_E">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>E</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_F">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>F</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_G">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>G</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_H">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>H</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_I">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>I</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_J">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>J</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_K">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>K</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_L">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>L</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_M">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>M</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_N">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>N</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_O">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>O</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_P">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>P</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_Q">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>Q</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_R">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>R</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_S">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>S</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_T">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>T</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_U">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>U</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_V">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>V</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_W">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>W</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_X">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>X</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_Y">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>Y</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pushButton_Z">
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">height: 51px;
-max-width: 66px;
-min-width: 66px;
-background: transparent;
-font-size: 30px;
-border: none;
-outline: none;
-</string>
-         </property>
-         <property name="text">
-          <string>Z</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
@@ -905,9 +322,9 @@ padding-right: 20px;</string>
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>170</y>
+       <y>200</y>
        <width>481</width>
-       <height>531</height>
+       <height>501</height>
       </rect>
      </property>
      <property name="font">
@@ -919,12 +336,21 @@ padding-right: 20px;</string>
       <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
-      <string notr="true">border: none;
-outline: none;
-background: transparent;
+      <string notr="true">QListWidget {
+	border: none;
+	outline: none;
+	background: transparent;
+};
 
-QListWidget::item {
-}</string>
+QListWidget::item:selected {
+	border: none;
+	background-color: transparent;
+};
+
+QListWidget::item:pressed {
+	border: none;
+	background: transparent;
+};</string>
      </property>
      <property name="lineWidth">
       <number>1</number>
@@ -937,6 +363,9 @@ QListWidget::item {
      </property>
      <property name="selectionMode">
       <enum>QAbstractItemView::NoSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
      </property>
      <property name="iconSize">
       <size>
@@ -989,6 +418,186 @@ left: 100%;</string>
       </size>
      </property>
     </widget>
+    <widget class="QListWidget" name="ListButtons">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>100</y>
+       <width>491</width>
+       <height>81</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>25</pointsize>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">padding-left: 25px;
+border: none;</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="autoScroll">
+      <bool>true</bool>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::NoSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="flow">
+      <enum>QListView::LeftToRight</enum>
+     </property>
+     <property name="spacing">
+      <number>24</number>
+     </property>
+     <property name="selectionRectVisible">
+      <bool>false</bool>
+     </property>
+     <item>
+      <property name="text">
+       <string>A</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>B</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>C</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>D</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>E</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>F</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>G</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>H</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>J</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>K</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>L</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>M</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>N</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>O</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>P</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Q</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>R</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>S</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>T</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>U</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>V</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>W</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>X</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Y</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Z</string>
+      </property>
+     </item>
+    </widget>
    </widget>
    <widget class="QWidget" name="DetailsScreen" native="true">
     <property name="enabled">
@@ -1040,38 +649,25 @@ border: 0px;</string>
       <property name="verticalSpacing">
        <number>0</number>
       </property>
-      <item row="1" column="0" colspan="2">
-       <widget class="QLineEdit" name="lineEditName">
-        <property name="enabled">
-         <bool>true</bool>
+      <item row="8" column="0">
+       <widget class="QPushButton" name="ButtonEdit">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
         <property name="styleSheet">
-         <string notr="true">QLineEdit {
-background-color: #E0E0E0;
-height: 35px;
-padding: 15px;
+         <string notr="true">background: #241F31;
+color: #FFF;
+height: 50px;
 
-font-size: 18px;
-
-margin-bottom: 20px;
-}
-
-QLineEdit:disabled {
-	color: #000;
-}</string>
-        </property>
-        <property name="inputMask">
-         <string/>
+font-size: 20px;
+font-weight: 700;</string>
         </property>
         <property name="text">
-         <string/>
-        </property>
-        <property name="placeholderText">
-         <string>Digite um nome...</string>
+         <string>EDITAR</string>
         </property>
        </widget>
       </item>
-      <item row="10" column="0" colspan="2">
+      <item row="12" column="0" colspan="2">
        <spacer name="verticalSpacer_2">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
@@ -1083,6 +679,22 @@ QLineEdit:disabled {
          <size>
           <width>470</width>
           <height>31</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="7" column="0" colspan="2">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>133</height>
          </size>
         </property>
        </spacer>
@@ -1342,21 +954,23 @@ QComboBox:disabled {
         </item>
        </widget>
       </item>
-      <item row="7" column="0" colspan="2">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
+      <item row="11" column="0" colspan="2">
+       <widget class="QPushButton" name="ButtonSave">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
         </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
+        <property name="styleSheet">
+         <string notr="true">background: #241F31;
+color: #FFF;
+height: 50px;
+
+font-size: 20px;
+font-weight: 700;</string>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>133</height>
-         </size>
+        <property name="text">
+         <string>Salvar</string>
         </property>
-       </spacer>
+       </widget>
       </item>
       <item row="0" column="0" colspan="2">
        <widget class="QLabel" name="labelName">
@@ -1373,18 +987,18 @@ padding: 0;</string>
         </property>
        </widget>
       </item>
-      <item row="8" column="0">
-       <widget class="QPushButton" name="ButtonEdit">
+      <item row="2" column="1">
+       <widget class="QLabel" name="labelMonth">
         <property name="styleSheet">
-         <string notr="true">background: #241F31;
-color: #FFF;
-height: 50px;
+         <string notr="true">color: #6A6A6A;
+background: none;
+font-weight: 400;
+font-size: 14px;
 
-font-size: 20px;
-font-weight: 700;</string>
+padding: 0;</string>
         </property>
         <property name="text">
-         <string>EDITAR</string>
+         <string>Mês Aniversário</string>
         </property>
        </widget>
       </item>
@@ -1404,10 +1018,92 @@ padding: 0;
         </property>
        </widget>
       </item>
+      <item row="8" column="1">
+       <widget class="QPushButton" name="ButtonDelete">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #FF4848;
+color: #FFF;
+height: 50px;
+
+font-size: 20px;
+font-weight: 700;</string>
+        </property>
+        <property name="text">
+         <string>APAGAR</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QLineEdit" name="lineEditName">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+background-color: #E0E0E0;
+height: 35px;
+padding: 15px;
+
+font-size: 18px;
+
+margin-bottom: 20px;
+}
+
+QLineEdit:disabled {
+	color: #000;
+}</string>
+        </property>
+        <property name="inputMask">
+         <string/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="placeholderText">
+         <string>Digite um nome...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <widget class="QPushButton" name="ButtonUpdate">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: #241F31;
+color: #FFF;
+height: 50px;
+
+font-size: 20px;
+font-weight: 700;</string>
+        </property>
+        <property name="text">
+         <string>Salvar</string>
+        </property>
+       </widget>
+      </item>
       <item row="5" column="1">
        <widget class="QComboBox" name="comboBoxMonth">
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="mouseTracking">
+         <bool>true</bool>
+        </property>
+        <property name="tabletTracking">
+         <bool>false</bool>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::WheelFocus</enum>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::DefaultContextMenu</enum>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
         </property>
         <property name="styleSheet">
          <string notr="true">QComboBox {
@@ -1454,6 +1150,12 @@ QComboBox:disabled {
         <property name="inputMethodHints">
          <set>Qt::ImhNone</set>
         </property>
+        <property name="editable">
+         <bool>false</bool>
+        </property>
+        <property name="currentText">
+         <string/>
+        </property>
         <property name="currentIndex">
          <number>-1</number>
         </property>
@@ -1461,25 +1163,25 @@ QComboBox:disabled {
          <number>3</number>
         </property>
         <property name="maxCount">
-         <number>13</number>
+         <number>32</number>
         </property>
         <property name="insertPolicy">
          <enum>QComboBox::InsertAtCurrent</enum>
         </property>
         <property name="sizeAdjustPolicy">
-         <enum>QComboBox::AdjustToContents</enum>
+         <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
         </property>
         <property name="minimumContentsLength">
          <number>0</number>
         </property>
-        <property name="iconSize">
-         <size>
-          <width>16</width>
-          <height>16</height>
-         </size>
-        </property>
         <property name="placeholderText">
          <string>00</string>
+        </property>
+        <property name="duplicatesEnabled">
+         <bool>false</bool>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
         </property>
         <item>
          <property name="text">
@@ -1541,54 +1243,6 @@ QComboBox:disabled {
           <string>12</string>
          </property>
         </item>
-       </widget>
-      </item>
-      <item row="2" column="1">
-       <widget class="QLabel" name="labelMonth">
-        <property name="styleSheet">
-         <string notr="true">color: #6A6A6A;
-background: none;
-font-weight: 400;
-font-size: 14px;
-
-padding: 0;</string>
-        </property>
-        <property name="text">
-         <string>Mês Aniversário</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="1">
-       <widget class="QPushButton" name="ButtonDelete">
-        <property name="styleSheet">
-         <string notr="true">background: #FF4848;
-color: #FFF;
-height: 50px;
-
-font-size: 20px;
-font-weight: 700;</string>
-        </property>
-        <property name="text">
-         <string>APAGAR</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0" colspan="2">
-       <widget class="QPushButton" name="ButtonSave">
-        <property name="cursor">
-         <cursorShape>PointingHandCursor</cursorShape>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background: #241F31;
-color: #FFF;
-height: 50px;
-
-font-size: 20px;
-font-weight: 700;</string>
-        </property>
-        <property name="text">
-         <string>Salvar</string>
-        </property>
        </widget>
       </item>
      </layout>
@@ -1745,6 +1399,192 @@ outline: none;</string>
       </item>
      </layout>
     </widget>
+   </widget>
+   <widget class="QWidget" name="Modal" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>0</y>
+      <width>491</width>
+      <height>701</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgba(0, 0, 0, 100);</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <spacer name="verticalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>248</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_2">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>170</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>170</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: #FFF;</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0" colspan="2">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>18</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #FFF;
+color: #241F31;</string>
+          </property>
+          <property name="lineWidth">
+           <number>2</number>
+          </property>
+          <property name="text">
+           <string>Tem certeza que deseja excluir esse contato?</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::RichText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="buttonNO">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>47</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #241F31;
+color: #FFF;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>NÃO</string>
+          </property>
+          <property name="autoRepeat">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="buttonYES">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background: #FF4848;
+color: #FFF;
+border: none;</string>
+          </property>
+          <property name="text">
+           <string>SIM</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>247</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>
