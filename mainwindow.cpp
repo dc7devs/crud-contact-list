@@ -10,11 +10,15 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     this->ui.Modal->setVisible(false);
     this->ui.ButtonAddImage->setStyleSheet(STYLE_IMAGE_DEFAULT);
 
-    DB.setDatabaseName("/home/dcdevs/Desktop/www/QTs/crud-contact-list/contactlist");
+    QString dir=qApp->applicationDirPath();
+    QString banco=dir+"/banco/contactlist";
+
+    DB.setDatabaseName(banco);
 
     if(!DB.open()) {
-        qDebug() << "Não foi possivel abrir";
-        // exit(1);
+        qDebug() << "Não foi possivel abrir o banco de dados :(";
+    } else {
+        qDebug() << "Banco aberto com sucesso!";
     }
 
     refreshQListWidget();

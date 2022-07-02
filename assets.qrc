@@ -3,14 +3,12 @@
         <file>assets/Searh-Icon.svg</file>
         <file>assets/plus-cc.svg</file>
         <file>assets/p-circle.svg</file>
-        <file>assets/arrow-left-small.svg</file>
         <file>assets/arrow-left-small_b.svg</file>
         <file>assets/arrow-down.svg</file>
     </qresource>
     <qresource prefix="/images">
         <file>assets/person-circle.png</file>
-        <file>assets/favicon.png</file>
         <file>assets/camera-hover.png</file>
-        <file>assets/camera.png</file>
+        <file>assets/favicon-icon.png</file>
     </qresource>
 </RCC>

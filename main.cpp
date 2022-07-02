@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
 
     QSplashScreen *splash = new QSplashScreen;
-    splash->setPixmap(QPixmap(":/images/assets/favicon.png"));
+    splash->setPixmap(QPixmap(":/images/assets/favicon-icon.png"));
     splash->show();
 
     MainWindow w;
