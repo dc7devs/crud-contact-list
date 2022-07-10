@@ -11,17 +11,17 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     this->ui.ButtonAddImage->setStyleSheet(STYLE_IMAGE_DEFAULT);
 
     QString dir=qApp->applicationDirPath();
-    QString banco=dir+"/banco/contactlist";
+    QString banco=dir+"dbcontacts.db";
 
     DB.setDatabaseName(banco);
 
     if(!DB.open()) {
-        qDebug() << "Não foi possivel abrir o banco de dados :(";
+        qDebug() << "FALHA ao abrir o banco de dados! :(";
     } else {
-        qDebug() << "Banco aberto com sucesso!";
-    }
+        qDebug() << "Banco de dados aberto com SUCESSO! :)";
 
-    refreshQListWidget();
+        refreshQListWidget();
+    }
 
     connect(this->ui.AddNewContact, &QPushButton::clicked, this, &MainWindow::createContactScreen);
     connect(this->ui.ListContact, &QListWidget::itemClicked, this, &MainWindow::readContactScreen);
@@ -78,7 +78,7 @@ void MainWindow::readContactScreen(QListWidgetItem *item) {
     this->ui.DetailsScreen->setVisible(true);
     item->setSelected(true);
 
-    int ID = item->data(6).toInt();
+    int ID = item->data(1).toInt();
     readToDatabase(ID);
     this->ui.ButtonAddImage->setStyleSheet(STYLE_IMAGE);
 }
@@ -98,7 +98,7 @@ void MainWindow::updateContactScreen() {
 }
 void  MainWindow::deleteContactScreen() {
     // this->ui.Modal->setVisible(true);
-    int ID = this->ui.ListContact->currentItem()->data(6).toInt();
+    int ID = this->ui.ListContact->currentItem()->data(1).toInt();
     QMessageBox::StandardButton option = QMessageBox::question(this,"","Tem certeza que deseja excluir esse contato?", QMessageBox::Yes|QMessageBox::No);
 
     if(option == QMessageBox::Yes) {
@@ -161,7 +161,7 @@ void MainWindow::saveContact() {
     }
 }
 void MainWindow::updateContact() {
-    int ID = this->ui.ListContact->currentItem()->data(6).toInt();
+    int ID = this->ui.ListContact->currentItem()->data(1).toInt();
     updateToDatabase(ID);
 
     this->ui.DetailsScreen->setVisible(false);
@@ -169,23 +169,20 @@ void MainWindow::updateContact() {
 
 void MainWindow::addToDatabase() {
     QSqlQuery query;
-    query.prepare("INSERT INTO TB_CONTACT_LIST (id,name,day,month,pathimage) VALUES"
-                  "("+QString::number(pontToContactList.id)+","
+    query.prepare("INSERT INTO TB_CONTACT_LIST (name,day,month,pathimage) VALUES"
                   "'"+pontToContactList.name+"',"
                   "'"+pontToContactList.birthdayDay+"',"
                   "'"+pontToContactList.birthdayMonth+"',"
                   "'"+pontToContactList.pathImage+"')");
 
     if(query.exec()) {
-        // int Row=0;
-        // int NameSorted;
         QListWidgetItem *NewItem = new QListWidgetItem;
 
+        NewItem->setData(1, pontToContactList.id);
         NewItem->setData(2, pontToContactList.name);
         NewItem->setData(3, pontToContactList.birthdayDay);
         NewItem->setData(4, pontToContactList.birthdayMonth);
         NewItem->setData(5, pontToContactList.pathImage);
-        NewItem->setData(6, pontToContactList.id);
 
         NewItem->setText(NewItem->data(2).toString());
         NewItem->setIcon(QIcon(NewItem->data(5).toString()));
@@ -242,15 +239,16 @@ void MainWindow::refreshQListWidget() {
         while(this->ui.ListContact->count() > 0) {
             this->ui.ListContact->takeItem(0);
         }
+
         while(query.next()){
             QListWidgetItem *NewItem = new QListWidgetItem;
             int ID = this->ui.ListContact->count() != 0 ? this->ui.ListContact->count() +1: 1;
 
+            NewItem->setData(1, ID);
             NewItem->setData(2, query.value(1).toString());
             NewItem->setData(3, query.value(2).toString());
             NewItem->setData(4, query.value(3).toString());
             NewItem->setData(5, query.value(4).toString());
-            NewItem->setData(6, ID);
 
             NewItem->setText(NewItem->data(2).toString());
             NewItem->setIcon(QIcon(NewItem->data(5).toString()));
