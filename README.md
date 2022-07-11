@@ -17,11 +17,11 @@
 
 ### Manipulação e estruturas das informações (C/C++)
 
-- [x] Definir estrutura principal que carrega as informações do contato do banco de dados(essa estrutura ira receber as informações vidas do banco)
-- [x] Função para criar contato utilizando a estrutura, o contato deve ser adicionado no banco(Atualizar contato com as novas informações)
-- [x] Função para lê contato especifico da lista pelo banco de dados(Atualizar o layoyt com as novas informações)
-- [x] Função para atualizar informações especificas de um contato especifico do banco (atualizar layout com as novas informações)
-- [x] Função para remover contato do banco(atualizar o Layout com as novas informações)
+- [x] Definir estrutura principal que carrega as informações de contato do banco de dados (Essa estrutura ira receber as informações vindas do banco)
+- [x] Função para criar contato utilizando a estrutura, o contato deve ser adicionado no banco (Atualizar layout com as novas informações)
+- [x] Função para lê contato especifico da lista pelo banco de dados(Atualizar layoyt com as novas informações)
+- [x] Função para atualizar informações especificas de um contato especifico no banco (Atualizar layout com as novas informações)
+- [x] Função para remover contato do banco (Atualizar o Layout com as novas informações)
 
 ### Integração com banco (SQLite)
 
